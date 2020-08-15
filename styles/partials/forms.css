@@ -1,0 +1,49 @@
+.select-block label,
+.input-block label,
+.textarea-block label{
+    font-size:1.4rem;
+    color:var(--color-text-complement);
+}
+
+.input-block,
+.textarea-block{
+
+    position: relative;
+
+}
+
+.input-block input,
+.select-block select,
+.textarea-block textarea{
+    width: 100%;
+    height: 5.6rem;
+    margin-top: 0.8rem;
+    border-radius: 0.8rem;
+    background-color: var(--color-input-background);
+    border:1px solid green var(--color-line-in-white);
+    outline:0;
+    padding:0 1.6rem;
+    font:1.6rem Archivo;
+}
+
+.textarea-block textarea{
+    padding:1.2rem 1.6rem;
+    height: 16rem;
+
+    resize: vertical; /*Permitindo alteração apenas na vertical*/
+
+}
+
+.input-block:focus-within::after,
+.textarea-block:focus-within::after{ /*Quando tiver em foco(clicado) será criado um elemento html quando estiver em foco */
+    content:"";                         
+
+    width: cal(100% -3.2rem); /*Calculo matemático de 100% tire 3.2rem */
+    height:2px;
+    background:var(--color-primary-light);  /*Colocara cor red para visualizar*/
+
+    position:absolute;
+    left:1.6rem;
+    right:1.6rem;
+    bottom:0;
+}
